@@ -1,0 +1,82 @@
+// /////////////////////////
+// @@ TYPOGRAPHY
+// ////////////////////////
+
+html {
+  font: {
+    family: $ff-sans;
+    weight: $fw-light;
+  }
+}
+
+body {
+  font-size: $ff-size;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin-bottom: $margin-b;
+  font: {
+    family: $ff-titles;
+  }
+}
+
+h1 {
+  font: {
+    size: 10vw;
+  }
+
+  @include mq(desktop) {
+    font-size: 4.5vw;
+  }
+}
+
+h2 {
+  font: {
+    size: 9vw;
+  }
+
+  @include mq(tablet) {
+    font: {
+      size: 4vw;
+    }
+  }
+}
+
+h3 {
+  line-height: 1;
+  margin-bottom: $margin-b;
+  font: {
+    size: 2.2em;
+  }
+
+  @include mq(desktop) {
+    font-size: 3vw;
+  }
+}
+
+strong {
+  font: {
+    weight: bold;
+  }
+}
+
+.heading-one {
+  color: map-get($colors, white);
+}
+
+.heading-two {
+  color: map-get($colors, accent);
+  text-transform: uppercase;;
+
+  &--light {
+    color: map-get($colors, bcg-clr);
+  }
+}
+
+.heading-three {
+  color: map-get($colors, bcg-clr);
+}

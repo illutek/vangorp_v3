@@ -1,0 +1,32 @@
+// /////////////////////////
+// @@ VARIABLES
+// ////////////////////////
+
+// COLORS
+$colors: (
+  accent: rgb(166, 124, 83),
+  accent-two: rgb(206, 191, 173),
+  accent-three: rgb(60, 35, 19),
+  bcg-clr: rgb(234, 224, 212),
+  gray: rgb(225, 230, 225),
+  dark-gray: rgb(143, 148, 145),
+  black: rgb(33, 33, 33),
+  white: rgb(255, 255, 255)
+);
+
+
+// FONTS VARIABLES
+$ff-sans: 'Roboto', sans-serif;
+$ff-titles: 'Roboto', sans-serif;
+$fw-light: 300;
+$fw-bold: 700;
+$ff-size: 1.6rem;
+
+// LAYOUT VARIABLES
+$default-padding: 2.5em;
+$double-padding: $default-padding * 2;
+$margin-b: 3rem;
+$margin-bb: $margin-b * 2;
+
+// OTHER
+$trans-speed: .3s;

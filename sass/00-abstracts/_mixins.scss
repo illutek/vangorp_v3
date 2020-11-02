@@ -1,0 +1,68 @@
+// /////////////////////////
+// @@ MIXINS
+// ////////////////////////
+
+// mediaquery with maps
+
+$breakpoints: (
+  phone: 30em,  //more than 480px
+  tablet: 37.5em,  //more than 600px
+  desktop: 62.5em,  //more than 1000px
+  big-desktop: 118.75em   //more than 1900px
+);
+
+@mixin mq($size) {
+  @if map-has-key($breakpoints, $size) {
+    // a value in the map
+    $breakpoint: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if type-of($size) == number and not unitless($size) {
+    // a custom value px or em
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  } @else {
+    // no map-value or number
+    @error 'The breakpoints map does not have the key of `#{$size}`';
+  }
+}
+
+// @mixin para-t-img {
+//   display: flex;
+//   flex-direction: column;
+//   padding-bottom: 3rem;
+//   margin-bottom: $margin-bb;
+//   border-bottom: 1px rgba($gray, .4) solid;
+//   width: 100%;
+//     @include mq(tablet){
+//       display: inline-block;
+//     }
+// }
+
+// @mixin paragraph-items {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-evenly;
+//   flex-wrap: wrap;
+//   padding: 2rem 0;
+// }
+
+@mixin bcg-overlay($bgc: map-get($colors, accent), $clr: map-get($colors, white)) {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 999;
+  color: $clr;
+  background: rgba($bgc, 1.0);
+  transition: all 0.9s;
+}
+
+@mixin card-shadow--hover($clr) {
+  box-shadow: 2px 5.66px 20px 0px rgba(map-get($colors, $clr), 0.2);
+}

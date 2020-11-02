@@ -1,0 +1,60 @@
+// /////////////////////////
+// @@ STYLES INDEX
+// ////////////////////////
+
+// Used namespaces
+// Format with BEM
+// o-object-name[<element>|<modifier>] {}
+//
+// Layout: .l
+// Regions: .r
+// Components: .c
+// Content/node: .n
+// Utilities: .u
+
+// https://sass-lang.com/documentation/at-rules/import#index-files
+// would have liked to omit the index as described in the link above
+// need to find out more "Compatibility with Dart Sass"?
+
+// ================================
+// @@ ABSTRACTS
+// ================================
+
+@import "00-abstracts/index";
+
+// ================================
+// @@ BASE
+// ================================
+
+@import "01-base/index";
+
+// ================================
+// @@ LAYOUT
+// ================================
+
+// @import "02-layout/index";
+
+// ================================
+// @@ REGIONS
+// ================================
+// 
+// @import "03-regions/index";
+
+// ================================
+// @@ COMPONENTS
+// ================================
+
+// @import "04-components/index";
+
+// ================================
+// @@ CONTENT
+// ================================
+
+// @import "05-content/index";
+
+// ================================
+// @@ TRUMPS
+// ================================
+
+// @import "06-trumps/trumps.utilities";
+// @import "06-trumps/trumps.clearfix";
