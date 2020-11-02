@@ -1,0 +1,52 @@
+/*
+ * Bootstrap Cookie Alert by Wruczek
+ * https://github.com/Wruczek/Bootstrap-Cookie-Alert
+ * Released under MIT license
+ */
+.cookie {
+	&__alert {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 999;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(100%);
+		transition: all 500ms ease-out;
+		color: map-get($colors, white);
+		background: map-get($colors, accent);
+		padding: 2rem;
+		border-top: 1px solid map-get($colors, white);
+
+		& a {
+			text-decoration: none;
+			color: map-get($colors, white);
+		}
+
+		&.show {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0%);
+			transition-delay: 1000ms;
+		}
+
+		@include mq(tablet) {
+			width: 30rem;
+			left: 2rem;
+			bottom: 2rem;
+			border: 1px solid map-get($colors, white);
+		}
+	}
+
+	&__flex {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.cookie__alert .cookie__accept {
+	margin-left: 10px;
+	vertical-align: baseline;
+}

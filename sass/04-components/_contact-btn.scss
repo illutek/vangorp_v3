@@ -1,0 +1,15 @@
+// //////////////////////////////
+// @@ CONTACT BUTTON 
+// //////////////////////////////
+
+.c-contact-btn {
+    width: 2.5rem;
+    height: 4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    @include mq(desktop) {
+        width: 0;
+    }
+}
