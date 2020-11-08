@@ -8,12 +8,68 @@
   <title>Patisserie Van Gorp</title>
 </head>
 <body>
-  <div class="r-top-header">
-    Menu btn and contact btn
+  <div class="r-header__top">
+    <div class="container r-header__top-inner">
+      <div class="r-header__menu">
+        <div class="c-hamburger-btn">
+          <span class="c-hamburger-btn--open">&nbsp;</span>
+          <span class="c-hamburger-btn__label"> Menu</span>
+        </div>
+      </div>
+      <div class="r-header__contact">
+        <div class="c-contact-btn js-open-contact">
+          <img src="../dist/images/contact-btn.png" alt="" />
+        </div>
+      </div>
+    </div>
   </div>
   <header clas="r-header">
     Header 
   </header>
+
+  <div class="r-news">
+    Nieuws items
+  </div>
+
+  <div class="r-welcome">
+    Welkom
+  </div>
+
+  <div class="r-sourdough-bread">
+    Zuurdesembrood
+  </div>
+
+  <div class="r-welcome-sub">
+    Welkom sub
+  </div>
+
+  <div class="r-product-range">
+    Assortiment
+  </div>
+
+  <div class="r-contact">
+    Contact
+  </div>
+
+  <footer class="r-footer">
+    Footer
+  </footer>
+
+  <!-- start of cookie__alert -->
+	<div class="cookie__alert" role="alert">
+		<p>We gebruiken cookies om ervoor te zorgen dat u de beste ervaring op onze website krijgt. </p>
+
+		<div class="cookie__flex">
+			<a href="<?php ('site_url'); ?>/privacyverklaring">Lees meer</a>
+			<button type="button" class="c-btn c-btn--accent-two cookie__accept">
+				Akkoord
+			</button>
+		</div>
+
+	</div>
+	<!-- end of cookie__alert -->
   
+  <script src="../dist/js/all.js"></script>
+
 </body>
 </html>
