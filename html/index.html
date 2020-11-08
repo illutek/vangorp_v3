@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <title>Patisserie Van Gorp</title>
 </head>
+
 <body>
 
   <!-- start r-menu-overlay -->
@@ -34,7 +36,7 @@
     </div>
   </div>
   <!-- end r-menu-overlay -->
-  
+
   <!-- start r-contact-overlay -->
   <div class="r-contact-overlay">
     <div class="r-contact-overlay__inner">
@@ -95,12 +97,22 @@
   </header>
   <!-- end r-header -->
 
-  <div class="r-news">
+  <!-- <div class="r-news">
     Nieuws items
-  </div>
+  </div> -->
 
   <div class="r-welcome">
-    Welkom
+    <div class="r-welcome__inner">
+      <div class="r-welcome__body">
+        <h2>Welkom bij Patisserie Van Gorp</h2>
+        <p>Eerlijk, puur, lekker en gezond. Alleen de beste ingrediënten zijn goed genoeg.</p>
+      </div>
+      <div class="r-welcome__images">
+        <img src="../dist/images/welcome-img.png" alt="">
+      </div>
+
+    </div>
+
   </div>
 
   <div class="r-sourdough-bread">
@@ -124,20 +136,21 @@
   </footer>
 
   <!-- start of cookie__alert -->
-	<div class="cookie__alert" role="alert">
-		<p>We gebruiken cookies om ervoor te zorgen dat u de beste ervaring op onze website krijgt. </p>
+  <div class="cookie__alert" role="alert">
+    <p>We gebruiken cookies om ervoor te zorgen dat u de beste ervaring op onze website krijgt. </p>
 
-		<div class="cookie__flex">
-			<a href="<?php ('site_url'); ?>/privacyverklaring">Lees meer</a>
-			<button type="button" class="c-btn c-btn--accent-two cookie__accept">
-				Akkoord
-			</button>
-		</div>
+    <div class="cookie__flex">
+      <a href="<?php ('site_url'); ?>/privacyverklaring">Lees meer</a>
+      <button type="button" class="c-btn c-btn--accent-two cookie__accept">
+        Akkoord
+      </button>
+    </div>
 
-	</div>
-	<!-- end of cookie__alert -->
-  
+  </div>
+  <!-- end of cookie__alert -->
+
   <script src="../dist/js/all.js"></script>
 
 </body>
+
 </html>
