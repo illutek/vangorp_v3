@@ -1,0 +1,27 @@
+// /////////////////////////
+// @@ COMPONENT BUTTONS
+// ////////////////////////
+
+.c-btn {
+
+    padding: 1em 3em;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    transition: 0.3s;
+
+    &--accent-two {
+        background-color: map-get($colors, accent-two);
+        color: map-get($colors, black);
+    }
+
+    &--accent {
+        background-color: map-get($colors, accent);
+        color: map-get($colors, black);
+    }
+
+    &:hover {
+        @include card-shadow--hover(accent);
+        transform: scale(1.01);
+    }
+}
