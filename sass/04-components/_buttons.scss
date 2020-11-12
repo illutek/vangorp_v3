@@ -17,7 +17,7 @@
 
     &--accent {
         background-color: map-get($colors, accent);
-        color: map-get($colors, black);
+        color: map-get($colors, white);
     }
 
     &:hover {

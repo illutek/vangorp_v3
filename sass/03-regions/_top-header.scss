@@ -3,9 +3,13 @@
 // ////////////////////////
 
 .r-header {
+
 	&__top {
 		background-color: map-get($colors, accent);
-		color: map-get($colors, accent-two);
+    color: map-get($colors, accent-two);
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   &__top-inner {
