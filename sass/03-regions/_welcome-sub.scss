@@ -3,5 +3,18 @@
 // ////////////////////////
 
 .r-welcome-sub {
-	margin-top: 3rem;
+  margin-top: 3rem;
+
+  &__inner {
+    background-color: map-get($colors, accent-two);
+
+    @include mq(tablet) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__body {
+    padding: 4rem;
+  }
 }
