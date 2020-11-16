@@ -31,6 +31,9 @@
   }
 
   &__body {
+    font: {
+      size: 2.4rem;
+    }
     margin-bottom: $margin-b;
   }
 
@@ -38,9 +41,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
-    margin-bottom: $margin-b;
     max-width: 50rem;
-    margin: 0 auto $margin-b;
+    margin: 0 auto $margin-bb;
 
   }
 }

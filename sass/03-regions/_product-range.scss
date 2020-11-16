@@ -1,0 +1,48 @@
+// /////////////////////////
+// @@ PRODUCT RANGE REGION
+// ////////////////////////
+
+.r-product-range {
+	margin-top: 5rem;
+	padding: 5rem 0;
+	position: relative;
+	background: {
+		image: url("../images/assortiment-3.jpg");
+		repeat: no-repeat;
+		size: cover;
+	}
+	z-index: 1;
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(map-get($colors, black), .85);
+		z-index: 2;
+	}
+
+	&__inner {
+		color: map-get($colors, white);
+		text-align: center;
+		position: relative;
+		z-index: 3;
+	}
+
+	&__body {
+    font: {
+      size: 2.4rem;
+    }
+		margin-bottom: $margin-b;
+  }
+  
+  &__img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+
+    max-width: 50rem;
+    margin: 0 auto $margin-bb;
+  }
+}
