@@ -1,0 +1,20 @@
+// /////////////////////////////
+// @@ CONTACT INFORMATION REGION
+// /////////////////////////////
+
+.r-contact {
+  margin-top: 3rem;
+  background-color: map-get($colors, accent-two);
+
+  &__inner {
+    padding: 3rem;
+  }
+
+  &__address {}
+
+  &__open {
+    margin-bottom: $margin-b;
+  }
+
+  &__social {}
+}
