@@ -1,0 +1,28 @@
+// /////////////////////////////
+// @@ FOOTER REGION
+// /////////////////////////////
+
+.r-footer {
+  margin-top: 3rem;
+  background-color: map-get($colors, accent);
+  color: map-get($colors, white);
+
+  &__decoration {
+    display: flex;
+
+  }
+
+  &__inner {
+    padding: 3rem;
+  }
+
+  &__top {}
+
+  &__bottom {}
+
+  &__link {
+    color: map-get($colors, white);
+    text-decoration: underline;
+  }
+
+}
