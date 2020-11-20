@@ -8,12 +8,33 @@
   color: map-get($colors, white);
 
   &__decoration {
-    display: flex;
+    display: none;
 
+    @include mq(tablet) {
+      display: block;
+    }
+  }
+
+  &__img-items {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  &__img-item {
+    margin-left: 0;
+  }
+
+  &__img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
   }
 
   &__inner {
     padding: 3rem;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__top {}
