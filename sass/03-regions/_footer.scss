@@ -33,17 +33,21 @@
 
   &__inner {
     padding: 3rem;
-    display: flex;
-    justify-content: space-between;
+
+    @include mq(desktop) {
+      display: flex;
+      justify-content: space-around;
+    }
   }
 
-  &__top {}
+  &__top {
+  }
 
-  &__bottom {}
+  &__bottom {
+  }
 
   &__link {
     color: map-get($colors, white);
     text-decoration: underline;
   }
-
 }

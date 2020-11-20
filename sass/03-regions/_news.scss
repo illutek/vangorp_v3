@@ -1,0 +1,16 @@
+// /////////////////////////////
+// @@ NEWS REGION
+// /////////////////////////////
+
+.r-news {
+  background-color: map-get($colors, accent);
+  color: map-get($colors, white);
+  max-width: 60rem;
+  margin: $margin-bb auto;
+
+  &__inner {
+    padding: 3rem;
+  }
+
+  &__title {}
+}
