@@ -5,7 +5,7 @@
 .r-news {
   background-color: map-get($colors, accent);
   color: map-get($colors, white);
-  max-width: 60rem;
+  max-width: 80rem;
   margin: $margin-bb auto;
 
   &__inner {
@@ -13,4 +13,19 @@
   }
 
   &__title {}
+
+  &__body {
+    height: auto;
+    overflow: auto;
+  }
+
+  &__img {
+    margin-bottom: $margin-b;
+
+    @include mq(tablet) {
+      float: left;
+      max-width: 25rem;
+      margin-right: 3rem;
+    }
+  }
 }
