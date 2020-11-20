@@ -8,7 +8,9 @@
 	position: relative;
 	background: {
 		image: url("../images/assortiment-3.jpg");
-		repeat: no-repeat;
+    repeat: no-repeat;
+    attachment: fixed;
+    position: center;
 		size: cover;
 	}
 	z-index: 1;
