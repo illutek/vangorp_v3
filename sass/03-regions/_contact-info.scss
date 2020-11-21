@@ -8,6 +8,23 @@
 
   &__inner {
     padding: 3rem;
+
+    @include mq(desktop) {
+      display: flex;
+      
+    }
+  }
+
+  &__top {
+    flex-grow: 1;
+  }
+
+  &__bottom {
+    flex-grow: 1;
+
+    @include mq(desktop) {
+      margin-left: $margin-b;
+    }
   }
 
   &__address {}
