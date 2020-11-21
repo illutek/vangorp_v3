@@ -1,0 +1,57 @@
+// /////////////////////////
+// @@ REGION TOP HEADER
+// ////////////////////////
+
+.r-header-top {
+	background-color: map-get($colors, accent);
+	color: map-get($colors, accent-two);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+	&__inner {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__menu-btn {
+		@include mq(desktop) {
+			display: none;
+		}
+	}
+
+	&__brand {
+		display: none;
+
+		@include mq(desktop) {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__img-logo {
+		width: 12rem;
+	}
+
+	&__title {
+    
+		h1 {
+			font: {
+				size: 4rem;
+      }
+      margin-bottom: 0;
+		}
+  }
+  
+
+  &__menu-desktop {
+    display: none;
+
+    @include mq(desktop) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// /////////////////////////
+// @@ MENU-OVELAY REGION
+// ////////////////////////
+
+.r-menu {
+  
+  &__items {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {}
+
+  &__link {
+    color: map-get($colors, bcg-clr);
+  }
+}
