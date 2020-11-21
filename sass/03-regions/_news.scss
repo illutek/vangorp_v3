@@ -3,29 +3,39 @@
 // /////////////////////////////
 
 .r-news {
-  background-color: map-get($colors, accent);
-  color: map-get($colors, white);
-  max-width: 80rem;
-  margin: $margin-bb auto;
+	background-color: map-get($colors, accent);
+	color: map-get($colors, white);
+	max-width: 80rem;
+	margin: $margin-bb auto;
 
-  &__inner {
-    padding: 3rem;
-  }
+	@include mq(desktop) {
+    background-color: rgba(map-get($colors, accent), .8);
+    position: absolute;
+    max-width: 70rem;
+		top: 16rem;
+		left: 10vw;
+		z-index: 989;
+	}
 
-  &__title {}
+	&__inner {
+		padding: 3rem;
+	}
 
-  &__body {
-    height: auto;
-    overflow: auto;
-  }
+	&__title {
+	}
 
-  &__img {
-    margin-bottom: $margin-b;
+	&__body {
+		height: auto;
+		overflow: auto;
+	}
 
-    @include mq(tablet) {
-      float: left;
-      max-width: 25rem;
-      margin-right: 3rem;
-    }
-  }
+	&__img {
+		margin-bottom: $margin-b;
+
+		@include mq(tablet) {
+			float: left;
+			max-width: 25rem;
+			margin-right: 3rem;
+		}
+	}
 }
