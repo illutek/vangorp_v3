@@ -3,18 +3,49 @@
 // ////////////////////////
 
 .r-welcome-sub {
-  margin-top: 3rem;
+  max-width: 80rem;
+  margin: $margin-bbb auto;
 
-  &__inner {
-    background-color: map-get($colors, accent-two);
+	&__inner {
+		background-color: map-get($colors, accent-two);
 
-    @include mq(tablet) {
+		@include mq(tablet) {
       display: grid;
-      grid-template-columns: 1fr;
-    }
-  }
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        'body-0 image-0'
+        'image-1 body-1';
+		}
+	}
 
-  &__body {
+	&__body-0 {
     padding: 4rem;
+    
+		@include mq(tablet) {
+			grid-area: body-0;
+		}
   }
+  
+  &__body-1 {
+    padding: 4rem;
+    
+		@include mq(tablet) {
+			grid-area: body-1;
+		}
+	}
+
+	&__img-0 {
+
+		@include mq(tablet) {
+			grid-area: image-0;
+		}
+	}
+
+	&__img-1 {
+
+		@include mq(tablet) {
+			grid-area: image-1;
+		}
+	}
 }

@@ -3,34 +3,38 @@
 // ////////////////////////
 
 .r-welcome {
-  margin-top: 3rem;
+	margin-top: 3rem;
 
-  &__images {
-    background-color: map-get($colors, black);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+	@include mq(desktop) {
+		margin: $margin-bbb 0;
 
-    & img:hover {
-      opacity: .95;
-    }
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
   }
+  
+	&__body {
+		margin-bottom: $margin-bb;
 
-  @include mq(desktop) {
+		@include mq(desktop) {
+			max-width: 45vw;
+		}
+	}
 
-    margin: $margin-bbb 0;
+	&__images {
+		background-color: map-get($colors, black);
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 
-    &__inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+		& img:hover {
+			opacity: .95;
+		}
 
-    &__body {
-      max-width: 45vw;
-    }
-
-    &__images {
-      max-width: 35vw;
-    }
-  }
+		@include mq(desktop) {
+			max-width: 35vw;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 }

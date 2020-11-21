@@ -27,6 +27,7 @@
 
 	&__inner {
 		color: map-get($colors, white);
+		max-width: 80rem;
 		text-align: center;
 		position: relative;
 		z-index: 3;
