@@ -4,4 +4,33 @@
 
 .r-welcome {
   margin-top: 3rem;
+
+  &__images {
+    background-color: map-get($colors, black);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & img:hover {
+      opacity: .95;
+    }
+  }
+
+  @include mq(desktop) {
+
+    margin: $margin-bbb 0;
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__body {
+      max-width: 45vw;
+    }
+
+    &__images {
+      max-width: 35vw;
+    }
+  }
 }
