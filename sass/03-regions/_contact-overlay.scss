@@ -8,6 +8,11 @@
 
 	@include bcg-overlay(map-get($colors, accent), map-get($colors, black));
 
+	
+  @include mq(tablet) {
+    width: 80vw;
+  }
+
 	&__inner {
 		height: 100%;
 		display: flex;
