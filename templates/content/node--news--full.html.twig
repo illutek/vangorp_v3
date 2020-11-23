@@ -1,0 +1,42 @@
+{#
+/**
+ *
+ * @see template_preprocess_node()
+ *
+ * @todo Remove the id attribute (or make it a class), because if that gets
+ *   rendered twice on a page this is invalid CSS for example: two lists
+ *   in different view modes.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<div class="r-news__inner">
+	<article{{attributes.addClass(classes)}}>
+
+		<h2{{title_attributes.addClass('r-news__title')}}>
+			{{ label }}
+		</h2>
+
+		<div class="r-news__body">
+    
+			<div class="r-news__img">
+				{{ content.field_news_img }}
+			</div>
+
+			<div{{content_attributes.addClass('r-news__text')}}>
+				{{ content.body }}
+			</div>
+
+		</div>
+
+	</article>
+</div>
