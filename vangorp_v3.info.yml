@@ -1,0 +1,16 @@
+name: VanGorp
+type: theme
+discription: "Patisserie"
+base theme: classy
+package: Custom
+core_version_requirement: 8.x || 9.x
+version: 1.0.0
+
+libraries:
+  - vangorp_v3/globalstyle
+  - vangorp_v3/fonts
+  - vangorp_v3/java
+
+regions:
+  content: Content
+  news: News

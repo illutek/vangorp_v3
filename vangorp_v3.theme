@@ -1,0 +1,19 @@
+<?php
+/**
+ * Load the site name and slogan out of configuration.
+ */
+
+ function vangorp_v3_preprocess_page(array &$variables) {
+
+   $config = \Drupal::config('system.site');
+   $variables['site_name'] = $config->get('name');
+   $variables['site_slogan'] = $config->get('slogan');
+
+ }
+
+ /**
+ * Implements hook_preprocess().
+ */
+function vangorp_v3_preprocess(array &$variables, $hook) {
+  $variables['base_path'] = base_path();
+}
