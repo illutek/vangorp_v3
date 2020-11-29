@@ -30,25 +30,13 @@ $breakpoints: (
   }
 }
 
-// @mixin para-t-img {
-//   display: flex;
-//   flex-direction: column;
-//   padding-bottom: 3rem;
-//   margin-bottom: $margin-bb;
-//   border-bottom: 1px rgba($gray, .4) solid;
-//   width: 100%;
-//     @include mq(tablet){
-//       display: inline-block;
-//     }
-// }
+@mixin hover-scale($scale){
+  transition: all .5s;
 
-// @mixin paragraph-items {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-evenly;
-//   flex-wrap: wrap;
-//   padding: 2rem 0;
-// }
+  &:hover {
+    transform: scale($scale);
+  }
+}
 
 @mixin bcg-overlay($bgc: map-get($colors, accent), $clr: map-get($colors, white)) {
   opacity: 0;

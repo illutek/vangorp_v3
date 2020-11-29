@@ -48,13 +48,17 @@
     }
 	}
 
-	&__social {
+	&__icons {
     display: flex;
     justify-content: flex-end;
   }
   
 	&__icon {
 		width: 4.8rem;
+		margin-right: 1rem;
+		
+		@include hover-scale(1.1);
+
 	}
 
 	&--visible {

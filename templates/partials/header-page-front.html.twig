@@ -1,0 +1,22 @@
+{# 
+* Header on page-front.html.twig
+* a different background image than on the page.html.twig
+ #}
+
+
+ <header class="r-header">
+	<div class="r-header__overlay"></div>
+	<div class="r-header__inner">
+		<div class="r-header__brand">
+			<div class="r-header__logo">
+				<img class="r-header__img-logo" src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Van Gorp logo">
+			</div>
+			<div class="r-header__title">
+				<h1>{{ site_name }}</h1>
+				<div class="r-header__slogan">
+					{{ site_slogan }}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

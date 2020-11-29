@@ -1,54 +1,9 @@
 <!-- start r-menu-overlay -->
-<div class="r-menu-overlay">
-	<div class="r-menu-overlay__top">
-		<div class="r-menu-overlay__close js-close-menu">
-			<span class="c-close-btn c-close-btn--black">&nbsp;</span>
-		</div>
-		<div class="r-menu-overlay__logo">
-			<img src="../dist/images/logo.png" alt="">
-		</div>
-	</div>
-
-	<div class="r-menu-overlay__list">
-		<div class="">
-			<ul class="r-menu-overlay__items">
-				<li class="r-menu-overlay__item">
-					<a class="r-menu-overlay__link" href="#">Home</a>
-				</li>
-				<li class="r-menu-overlay__item">
-					<a class="r-menu-overlay__link" href="#">Zuurdesembrood</a>
-				</li>
-				<li class="r-menu-overlay__item">
-					<a class="r-menu-overlay__link" href="#">Assortiment</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
+  {% include directory ~ '/templates/partials/shared/menu-overlay.html.twig' %}
 <!-- end r-menu-overlay -->
 
 <!-- start r-contact-overlay -->
-<div class="r-contact-overlay">
-	<div class="r-contact-overlay__inner">
-		<div class="r-contact-overlay__top">
-			<div class="r-contact-overlay__logo">
-				<img src="../dist/images/logo.png" alt="">
-			</div>
-			<div class="r-contact-overlay__close js-close-contact">
-				<div class="c-close-btn c-close-btn--black"></div>
-			</div>
-		</div>
-		<div class="r-contact-overlay__body">
-			<p>Van Gorp Patisserie<br>Sint-Jozeflaan 33<br>2400 Mol-Wezel</p>
-			<a class="c-phone c-phone--accent" href="tel:+3214811260">014/811260</a>
-		</div>
-		<!-- <div class="r-contact-overlay__social">
-						        <a href="https://www.facebook.com/uitvaartzorgkuaga/">
-						          <img class="r-contact-overlay__icon" src="../dist/images/facebook-icon.jpg" alt="">
-						        </a>
-						      </div> -->
-	</div>
-</div>
+  {% include directory ~ '/templates/partials/shared/contact-overlay.html.twig' %}
 <!-- end r-contact-overlay -->
 
 <!-- start r-header__top -->
@@ -56,22 +11,7 @@
 <!-- end r-header__top -->
 
 <!-- start r-header -->
-<header class="r-header">
-	<div class="r-header__overlay"></div>
-	<div class="r-header__inner">
-		<div class="r-header__brand">
-			<div class="r-header__logo">
-				<img class="r-header__img-logo" src="../dist/images/logo.png" alt="Van Gorp logo">
-			</div>
-			<div class="r-header__title">
-				<h1>Van Gorp</h1>
-				<div class="r-header__slogan">
-					Patisserie
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
+  {% include directory ~ '/templates/partials/header-page-front.html.twig' %}
 <!-- end r-header -->
 
 <!-- start r-news -->
