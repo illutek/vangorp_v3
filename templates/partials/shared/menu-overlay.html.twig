@@ -9,7 +9,9 @@
 			<span class="c-close-btn c-close-btn--black">&nbsp;</span>
 		</div>
 		<div class="r-menu-overlay__logo">
-			<img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="">
+			<a href="{{ path('<front>') }}">
+				<img src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Logo Van Gorp">
+			</a>
 		</div>
 	</div>
 
@@ -17,13 +19,16 @@
 		<div class="">
 			<ul class="r-menu-overlay__items">
 				<li class="r-menu-overlay__item">
-					<a class="r-menu-overlay__link" href="#">Home</a>
+					<a class="r-menu-overlay__link" href="{{ path('<front>') }}">Home</a>
 				</li>
 				<li class="r-menu-overlay__item">
-					<a class="r-menu-overlay__link" href="#">Zuurdesembrood</a>
+					<a class="r-menu-overlay__link" href="{{ path('<front>') }}#r-sourdough-bread">Zuurdesembrood</a>
 				</li>
 				<li class="r-menu-overlay__item">
-					<a class="r-menu-overlay__link" href="#">Assortiment</a>
+					<a class="r-menu-overlay__link" href="{{ path('<front>') }}#r-product-range">Assortiment</a>
+				</li>
+				<li class="r-menu-overlay__item">
+					<a class="r-menu-overlay__link" href="{{ path('<front>') }}#r-contact">Contact info</a>
 				</li>
 			</ul>
 		</div>
