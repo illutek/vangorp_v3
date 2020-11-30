@@ -27,49 +27,15 @@
 <!-- end r-sourdough-bread -->
 
 {# start r-welcome-sub  #}
-	<div class="r-welcome-sub container"> <div class="r-welcome-sub__inner">
-		<div class="r-welcome-sub__body-0">
-			<p>Correcte en eerlijke ingrediënten, geen onnodige verbeteraars en beperking in gebruik van suiker en zout. Wij
-												          trachten terug te gaan naar de basis.<br>
-				In ons atelier werken we enkel met goei boter, steeds rekening houdend met de seizoenen.</p>
-		</div>
-		<div class="r-welcome-sub__img-0">
-			<img src="../dist/images/interieur.png" alt="">
-		</div>
-
-		<div class="r-welcome-sub__body-1">
-			<p>Wij bieden u een groot assortiment aan broden, pistolets,koffiekoeken,klein gebak en taarten.<br>
-				Als aanvulling bieden wij u een verstoog aan met een groot assortiment charcuterie en kaas.</p>
-		</div>
-
-		<div class="r-welcome-sub__img-1">
-			<img src="../dist/images/ijs.png" alt="">
-		</div>
-	</div>
-</div>
+{% include directory ~ '/templates/partials/welcome-sub.html.twig' %}
 {# end r-welcome-sub  #}
 
-<!-- start r-product-range --><div class="r-product-range" id="r-product-range">
-	<div class="r-product-range__overlay"></div>
-	<div class="r-product-range__inner container">
-		<div class="r-product-range__title">
-			<h2>Assortiment</h2>
-			<div class="r-product-range__body">
-				<p>Gebak, koffiekoeken en taarten. Alles uit eigen atelier vervaardigd met goei boter.</p>
-			</div>
-			<div class="r-product-range__img">
-				<img src="../dist/images/assortiment-1.jpg" alt="">
-				<img src="../dist/images/assortiment-2.jpg" alt="">
-				<img src="../dist/images/assortiment-3.jpg" alt="">
-				<img src="../dist/images/assortiment-4.jpg" alt="">
-			</div>
-		</div>
+<!-- start r-product-range -->
+{% include directory ~ '/templates/partials/product-range.html.twig' %}
+<!-- end r-product-range -->
 
-		<a href="#" class="c-btn c-btn--accent">
-			Meer info
-		</a>
-	</div><!-- end r-product-range__inner --></div><!-- end r-product-range --><div class="r-contact" id="r-contact">
-	<div class="r-contact__inner container">
+{# start region contact info  #}
+	<div class="r-contact" id="r-contact"> <div class="r-contact__inner container">
 		<div class="r-contact__top">
 			<div class="r-contact__title">
 				<h2>Contact info</h2>
@@ -119,7 +85,12 @@
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2500.3159253202884!2d5.210631416077645!3d51.19483007958509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1330ece69c427%3A0x5323be37d0315e68!2sSint-Jozefslaan%2033%2C%202400%20Mol!5e0!3m2!1sen!2sbe!4v1605621115941!5m2!1sen!2sbe" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			</div>
 		</div>
-	</div><!-- end r-contact__inner  --></div>
+	</div>
+	<!-- end r-contact__inner  -->
+</div>
+{# end contact info region  #}
+
+{# start footer region  #}
 <footer class="r-footer">
 	<div
 		class="r-footer__decoration">
@@ -163,13 +134,8 @@
 			</p>
 			<p class="text-small">© 2020 | Van Gorp</p>
 		</div>
-	</div><!-- end r-footer__inner  --></footer><!-- start of cookie__alert --><div class="cookie__alert" role="alert">
-	<p>We gebruiken cookies om ervoor te zorgen dat u de beste ervaring op onze website krijgt.</p>
-	<div class="cookie__flex">
-		<a href="#">Lees meer</a>
-		<button type="button" class="c-btn c-btn--accent-two cookie__accept">
-			Akkoord
-		</button>
-	</div>
-</div>
+	</div><!-- end r-footer__inner  --></footer>
+
+<!-- start of cookie__alert -->
+{% include directory ~ '/templates/partials/shared/cookie-alert.html.twig' %}
 <!-- end of cookie__alert -->

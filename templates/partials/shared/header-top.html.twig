@@ -1,14 +1,18 @@
 {# HEADER-TOP REGION #}
 
-<div class="r-header-top" id="r-header-top">
+<div
+	class="r-header-top" id="r-header-top">
 
 	{# start r-header-top__inner  #}
-	<div class="container r-header-top__inner">
+	<div
+		class="container r-header-top__inner">
 
 		<!-- start r-header-top__brand  -->
 		<div class="r-header-top__brand">
 			<div class="r-header-top__logo">
-				<img class="r-header-top__img-logo" src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Van Gorp logo">
+				<a href="{{ path('<front>') }}">
+					<img class="r-header-top__img-logo" src="{{ base_path ~ directory }}/dist/images/logo.png" alt="Van Gorp logo">
+				</a>
 			</div>
 			<div class="r-header-top__title">
 				<h1>{{ site_name }}</h1>
@@ -45,7 +49,7 @@
 		</div>
 		<!-- end r-header-top__menu-btn -->
 
-    {# start r-header__contact #}
+		{# start r-header__contact #}
 		<div class="r-header__contact">
 			<div class="c-contact-btn js-open-contact">
 				<img src="{{ base_path ~ directory }}/dist/images/contact-btn.png" alt=""/>
