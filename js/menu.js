@@ -11,18 +11,18 @@
     var menuOverlay = document.querySelector('.r-menu-overlay');    
     var menuLink = document.querySelector('.r-menu-overlay__link');
   
-    // console.log(menuLink);
+    // console.log(menuOverlay);
   
     /** 
      *  Functions
     */
   
     function closeMenu() {
-      menuOverlay.classList.toggle('r-menu-overlay--visible');
+      menuOverlay.classList.remove('r-menu-overlay--visible');
     }
 
     function openMenu() {
-      menuOverlay.classList.toggle('r-menu-overlay--visible');
+      menuOverlay.classList.add('r-menu-overlay--visible');
     }
  
     openBtn.addEventListener('click', openMenu);

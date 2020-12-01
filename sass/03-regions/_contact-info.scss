@@ -34,5 +34,18 @@
     margin-bottom: $margin-b;
   }
 
-  &__social {}
+  &__social {
+    margin-bottom: $margin-b;
+  }
+
+  &__icons {
+    display: flex;
+  }
+
+  &__icon {
+    width: 3.2rem;
+    margin-right: 1rem;
+
+    @include hover-scale(1.1);
+  }
 }

@@ -1,0 +1,50 @@
+{# 
+* Contact-info region
+*
+#}
+
+	<div class="r-contact" id="r-contact"> <div class="r-contact__inner container">
+		<div class="r-contact__top">
+			<div class="r-contact__title">
+				<h2>Contact info</h2>
+			</div>
+			<div class="r-contact__address">
+				<p>Sint-Jozeflaan 33 2400 Mol-Wezel</p>
+				<p>014/811260</p>
+			</div>
+
+      {# start r-contact__open  #}
+			{# block region #}
+			<div class="r-contact__open">
+      {{ page.openinghours }}
+			</div>
+       {# end r-contact__open  #}
+
+       {# start r-contact__social  #}
+			<div class="r-contact__social">
+				<p>Volg onze bakkerij op
+				</p>
+				<div class="r-contact__icons">
+					<a href="https://www.facebook.com/PatisserieVanGorp">
+						<img class="r-contact__icon" src="{{ base_path ~ directory }}/dist/images/facebook-icon.png" alt="Facebook icon">
+					</a>
+
+					<a href="https://www.instagram.com">
+						<img class="r-contact__icon" src="{{ base_path ~ directory }}/dist/images/instagram.png" alt="">
+					</a>
+				</div>
+			</div>
+			{# end r-contact__social  #}
+		</div>
+		<!-- end r-contact__top -->
+
+		<div class="r-contact__bottom">
+			<div class="r-contact__maps">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2500.3159253202884!2d5.210631416077645!3d51.19483007958509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1330ece69c427%3A0x5323be37d0315e68!2sSint-Jozefslaan%2033%2C%202400%20Mol!5e0!3m2!1sen!2sbe!4v1605621115941!5m2!1sen!2sbe" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			</div>
+		</div>
+		{# end r-contact__bottom  #}
+	</div>
+	<!-- end r-contact__inner  -->
+
+</div>

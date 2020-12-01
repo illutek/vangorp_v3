@@ -1,0 +1,51 @@
+{# 
+* Footer region on page-front.html.twig and page.html.twig
+*
+#}
+
+<footer class="r-footer">
+	<div
+		class="r-footer__decoration">
+		<!-- radom number of photos -->
+		<ul class="r-footer__img-items">
+			<li class="r-footer__img-item">
+				<img class="r-footer__img" src="{{ base_path ~ directory }}/dist/images/footer-1.jpg" alt="">
+			</li>
+			<li class="r-footer__img-item">
+				<img class="r-footer__img" src="{{ base_path ~ directory }}/dist/images/footer-2.jpg" alt="">
+			</li>
+			<li class="r-footer__img-item">
+				<img class="r-footer__img" src="{{ base_path ~ directory }}/dist/images/footer-3.jpg" alt="">
+			</li>
+			<li class="r-footer__img-item">
+				<img class="r-footer__img" src="{{ base_path ~ directory }}/dist/images/footer-5.jpg" alt="">
+			</li>
+			<li class="r-footer__img-item">
+				<img class="r-footer__img" src="{{ base_path ~ directory }}/dist/images/footer-4.jpg" alt="">
+			</li>
+			<li class="r-footer__img-item">
+				<img class="r-footer__img" src="{{ base_path ~ directory }}/dist/images/footer-6.jpg" alt="">
+			</li>
+			<li class="r-footer__img-item">
+				<img class="r-footer__img" src="{{ base_path ~ directory }}/dist/images/footer-7.JPG" alt="">
+			</li>
+			<li class="r-footer__img-item">
+				<img class="r-footer__img" src="{{ base_path ~ directory }}/dist/images/footer-8.jpg" alt="">
+			</li>
+		</ul>
+	</div>
+	<div class="r-footer__inner">
+		<div class="r-footer__top">
+			<p>Van Gorp Patisserie - Sint-Jozeflaan 33 - 2400 Mol-Weze</p>
+		</div>
+		<div class="r-footer__bottom">
+			<p>
+				<a class="r-footer__link" href="{{ base_path }}#">Privacy Policy</a>
+				|
+				<a class="r-footer__link" href="{{ base_path }}#">Cookie Policy</a>
+			</p>
+			<p class="text-small">© {{ "now"|date("Y") }} | {{ site_name }}</p>
+		</div>
+	</div>
+	<!-- end r-footer__inner  -->
+</footer>
