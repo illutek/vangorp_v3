@@ -38,4 +38,11 @@
 			margin-right: 3rem;
 		}
 	}
+
+	// if there is no news an empty view is shown
+	// BEHAVIOUR IN THE ABSENCE OF RESULTS
+
+	&__view-empty {
+		padding: 3rem;
+	}
 }

@@ -6,6 +6,9 @@
  * @todo Remove the id attribute (or make it a class), because if that gets
  *   rendered twice on a page this is invalid CSS for example: two lists
  *   in different view modes.
+ *
+ *	if there is no news an empty view is shown
+ *  BEHAVIOUR IN THE ABSENCE OF RESULTS
  */
 #}
 {%
@@ -21,6 +24,20 @@
 {{ attach_library('classy/node') }}
 <div class="r-news__inner">
 	<article{{attributes.addClass(classes)}}>
+
+	{# 
+	* if there is no news an empty view is shown
+  * BEHAVIOUR IN THE ABSENCE OF RESULTS 
+	*
+	* <div class="r-news__view-empty">
+  * <div class="r-news__title">
+  * <h2>Zuurdesembrood</h2>
+  * </div>
+  * <div class="r-news__body">
+  * <p>Patisserie Van Gorp is één van de pioniers in de streek als het gaat om zuurdesembrood. Brood bakken zoals het bedoeld is. Al onze broden worden gebakken op basis van zuurdesem.</p>
+  * </div>
+  * </div>
+	#}
 
 		<h2{{title_attributes.addClass('r-news__title')}}>
 			{{ label }}
