@@ -23,7 +23,7 @@
 		}
 	}
 
-	&__images {
+	&__items {
 		background-color: map-get($colors, black);
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);

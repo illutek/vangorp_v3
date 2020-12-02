@@ -14,4 +14,7 @@ libraries:
 regions:
   content: Content
   news: News
+  welcome: "Welcome"
+  welcomesub: "Welcome Sub"
+  sourdoughbread: "Sourdough Bread"
   openinghours: "Opening hours"

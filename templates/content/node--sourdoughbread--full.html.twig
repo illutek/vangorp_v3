@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ *
+ */
+#}
+{%
+  set classes = [
+    'r-sourdough-bread__inner',
+    'r-sourdough-bread__inner--full',
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{attributes.addClass(classes)}}>
+
+	{# <div class="r-sourdough-bread__title">
+		<h2{{title_attributes}}>
+			{{ label }}
+		</h2>
+	</div> #}
+
+	<div class="r-sourdough-bread__img--full">
+		{{ content.field_sourdoughbread_img.0 }}
+		{{ content.field_sourdoughbread_img.1 }}
+	</div>
+
+	<div{{content_attributes.addClass('r-sourdough-bread__body--full')}}>
+		{{ content.body }}
+	</div>
+
+</article>

@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * 
+ */
+#}
+{%
+  set classes = [
+    'r-welcome__inner',
+    'container',
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{attributes.addClass(classes)}}>
+
+	<div{{content_attributes.addClass('r-welcome__body')}}>
+		<h2{{title_attributes}}>{{ label }}</h2>
+		{{ content.body }}
+	</div>
+
+	<div class="r-welcome__images">
+		{{ content.field_welcome_img }}
+	</div>
+
+</article>

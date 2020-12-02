@@ -3,48 +3,71 @@
 // ////////////////////////
 
 .r-sourdough-bread {
-  margin-top: 5rem;
-  padding: 8rem 0;
-  position: relative;
-  background: {
-    image: url("../images/header-bcg.jpg");
-    repeat: no-repeat;
-    attachment: fixed;
-    size: cover;
-  };
-  z-index: 1;
+	margin-top: 5rem;
+	padding: 8rem 0;
+	position: relative;
+	background: {
+		image: url("../images/header-bcg.jpg");
+		repeat: no-repeat;
+		attachment: fixed;
+		size: cover;
+	}
+	z-index: 1;
 
-  &__overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(map-get($colors, black), .85);
-    z-index: 2;
-  }
+	&__overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(map-get($colors, black), .85);
+		z-index: 2;
+	}
 
-  &__inner {
-    max-width: 80rem;
-    color: map-get($colors, white);
-    text-align: center;
-    position: relative;
+	&__inner {
+		max-width: 80rem;
+		color: map-get($colors, white);
+		text-align: center;
+		position: relative;
     z-index: 3;
-  }
-
-  &__body {
-    font: {
-      size: 2.4rem;
+    
+    &--full {
+      max-width: 100%;
     }
-    margin-bottom: $margin-b;
-  }
+	}
 
-  &__img {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-    max-width: 50rem;
-    margin: 0 auto $margin-bb;
+	&__body {
+		font: {
+			size: 2.4rem;
+		}
+		margin-bottom: $margin-b;
 
-  }
+		&--full {
+			color: map-get($colors, black);
+			text-align: left;
+		}
+	}
+
+	&__img {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1rem;
+		max-width: 50rem;
+		margin: 0 auto $margin-bb;
+
+		&--full {
+			display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+		max-width: 50rem;
+		margin: 0 auto $margin-bb;
+
+			@include mq(desktop) {
+				grid-template-columns: 1fr;
+				float: left;
+				max-width: 30rem;
+				margin-right: $margin-b;
+			}
+		}
+	}
 }
