@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * 
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{attributes.addClass(classes)}}>
+
+	<div{{content_attributes.addClass('r-product-range__body--full')}}>
+		{{ content.body }}
+	</div>
+
+  <div class="r-product-range__img--full">
+    {{ content.field_productrange_img }}
+  </div>
+
+</article>

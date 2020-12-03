@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * 
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'r-product-range__inner',
+    'container',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{attributes.addClass(classes)}}>
+
+	<h2{{title_attributes.addClass('r-product-range__title')}}>
+		{{ label }}
+	</h2>
+
+	<div{{content_attributes.addClass('r-product-range__body')}}>
+		{{ content.body }}
+	</div>
+
+	<div class="r-product-range__img">
+		{{ content.field_productrange_img }}
+	</div>
+
+  <a href="{{ url }}" class="c-btn c-btn--accent">
+		Meer info
+	</a>
+
+</article>
