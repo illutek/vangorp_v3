@@ -8,6 +8,7 @@ version: 1.0.0
 
 libraries:
   - vangorp_v3/globalstyle
+  - vangorp_v3/fontawesome
   - vangorp_v3/fonts
   - vangorp_v3/java
 

@@ -28,7 +28,13 @@
     }
   }
 
-  &__address {}
+  &__address {
+    margin-bottom: $margin-b;
+  }
+
+  &__icon-fa {
+    padding-right: .8rem;
+  }
 
   &__open {
     margin-bottom: $margin-b;
