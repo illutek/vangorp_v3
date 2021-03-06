@@ -1,2 +1,2 @@
 ## Patesserie Van Gorp
-Een Drupal 9 theme
+Een mobile-first Drupal 8-9 theme.
