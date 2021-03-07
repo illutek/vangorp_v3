@@ -18,15 +18,16 @@ const sourcemaps = require('gulp-sourcemaps'),
 
 // File paths
 const files = {
-	scssPath: 'sass/**/*.scss',
-	jsPath: 'js/**/*.js',
-	imgPath: 'images/**/*.*'
+	scssPath: './src/sass/**/*.scss',
+	jsPath: './src/js/**/*.js',
+	imgPath: './src/images/**/*.*'
 };
 
 // Dist paths
 const distPath = {
-	cssDist: 'dist/css',
-	jsDist: 'dist/js'
+	cssDist: './dist/css',
+	jsDist: './dist/js',
+	imgDist: './dist/images'
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -52,7 +53,7 @@ function jsTask() {
 		.pipe(concat('all.js'))
 		.pipe(uglify())
 		.pipe(lineec()) // line ending corrector
-		.pipe(dest('dist/js'));
+		.pipe(dest(distPath.jsDist));
 }
 
 // Images minify task
@@ -69,7 +70,7 @@ function imgTask() {
 				})
 			])
 		)
-		.pipe(dest('dist/images'));
+		.pipe(dest(distPath.imgDist));
 }
 
 // Watch task
