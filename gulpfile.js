@@ -15,6 +15,7 @@ const sourcemaps = require('gulp-sourcemaps'),
 	changed = require('gulp-changed'),
 	livereload = require('gulp-livereload'),
 	prettyError = require('gulp-prettyerror');
+	rename = require("gulp-rename");
 
 // File paths
 const files = {
@@ -37,10 +38,12 @@ function scssTask() {
 		.pipe(sourcemaps.init()) // initialize sourcemaps first
 		.pipe(sass()) // compile SCSS to CSS
 		.pipe(sourcemaps.write()) // write sourcemaps file in css directory
-		.pipe(dest('css')) // css no prefix or minify
+		.pipe(dest(distPath.cssDist)) // css no prefix or minify
 		.pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+		.pipe(rename("styles.min.css"))
 		.pipe(sourcemaps.write('.')) // write sourcemaps file in dist directory
 		.pipe(lineec()) // line ending corrector
+		// .pipe(rename("styles.min.css"))
 		.pipe(
 			dest(distPath.cssDist) // put final CSS in dist folder
 		)
