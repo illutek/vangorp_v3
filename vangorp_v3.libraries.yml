@@ -14,7 +14,7 @@ fonts:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi$id=OFL
   css:
     theme:
-      '//fonts.googleapis.com/css?family=family=Roboto:wght@300;700': { type: external, minified: true }
+      '//fonts.googleapis.com/css?family=Roboto:wght@300;700': { type: external, minified: true }
 
 java:
   js:
