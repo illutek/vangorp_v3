@@ -4,7 +4,7 @@ discription: "Patisserie"
 base theme: classy
 package: Custom
 core_version_requirement: 8.x || 9.x
-version: 1.0.0
+version: 1.1.0
 
 libraries:
   - vangorp_v3/globalstyle
