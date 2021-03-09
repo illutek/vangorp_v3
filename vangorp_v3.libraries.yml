@@ -6,7 +6,7 @@ globalstyle:
 fontawesome:
   css:
     theme:
-      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css': { type: external, minified: true }
+      '//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css': { type: external, minified: true }
 
 fonts:
   license:
