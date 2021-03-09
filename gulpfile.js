@@ -17,7 +17,7 @@ const sourcemaps = require('gulp-sourcemaps'),
 	prettyError = require('gulp-prettyerror');
 	rename = require("gulp-rename");
 
-// File paths
+// Source files paths
 const files = {
 	scssPath: './src/sass/**/*.scss',
 	jsPath: './src/js/**/*.js',
@@ -31,7 +31,7 @@ const distPath = {
 	imgDist: './dist/images'
 };
 
-// Sass task: compiles the style.scss file into style.css
+// Sass task: compiles the style.scss file into dist/css/style.css and dist/css/style.min.css
 function scssTask() {
 	return src(files.scssPath)
 		.pipe(prettyError())
@@ -43,7 +43,6 @@ function scssTask() {
 		.pipe(rename("styles.min.css"))
 		.pipe(sourcemaps.write('.')) // write sourcemaps file in dist directory
 		.pipe(lineec()) // line ending corrector
-		// .pipe(rename("styles.min.css"))
 		.pipe(
 			dest(distPath.cssDist) // put final CSS in dist folder
 		)
