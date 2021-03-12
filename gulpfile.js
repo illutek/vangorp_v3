@@ -37,14 +37,14 @@ function scssTask() {
 		.pipe(prettyError())
 		.pipe(sourcemaps.init()) // initialize sourcemaps first
 		.pipe(sass()) // compile SCSS to CSS
-		.pipe(sourcemaps.write()) // write sourcemaps file in css directory
+		.pipe(sourcemaps.write()) // write sourcemaps file in dist/css directory
 		.pipe(dest(distPath.cssDist)) // css no prefix or minify
 		.pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
 		.pipe(rename("styles.min.css"))
-		.pipe(sourcemaps.write('.')) // write sourcemaps file in dist directory
+		.pipe(sourcemaps.write('.')) // write sourcemaps file in dist/css directory
 		.pipe(lineec()) // line ending corrector
 		.pipe(
-			dest(distPath.cssDist) // put final CSS in dist folder
+			dest(distPath.cssDist) // put final CSS in dist/css folder
 		)
 		.pipe(livereload());
 }
@@ -61,7 +61,7 @@ function jsTask() {
 // Images minify task
 function imgTask() {
 	return src(files.imgPath)
-		.pipe(changed('dist/images'))
+		.pipe(changed(distPath.imgDist))
 		.pipe(
 			imagemin([
 				imagemin.gifsicle({ interlaced: true }),

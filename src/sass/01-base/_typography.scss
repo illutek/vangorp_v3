@@ -26,7 +26,13 @@ h3 {
 
 h1 {
   font: {
-    size: 5rem;
+    size: 10vw;
+  }
+
+  @include mq(tablet) {
+    font: {
+      size: 5rem;
+    }
   }
 
 }
