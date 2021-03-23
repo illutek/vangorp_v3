@@ -37,7 +37,7 @@ function scssTask() {
     .pipe(prettyError())
     .pipe(sourcemaps.init()) // initialize sourcemaps first
     .pipe(sass()) // compile SCSS to CSS
-    .pipe(sourcemaps.write()) // write sourcemaps file in dist/css directory
+    .pipe(sourcemaps.write('.')) // write sourcemaps file in dist/css directory
     .pipe(dest(distPath.cssDist)) // css no prefix or minify
     .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
     .pipe(
@@ -52,7 +52,7 @@ function scssTask() {
       })
     )
     .pipe(sourcemaps.write(".")) // write sourcemaps file in dist/css directory
-    .pipe(lineec()) // line ending corrector
+    .pipe(lineec({verbose:true, eolc: 'LF', encoding:'utf8'})) // line ending corrector
     .pipe(
       dest(distPath.cssDist) // put final CSS in dist/css folder
     )
@@ -62,9 +62,11 @@ function scssTask() {
 // JS Task
 function jsTask() {
   return src(files.jsPath)
+    .pipe(sourcemaps.init())
     .pipe(concat("all.js"))
     .pipe(uglify())
     .pipe(lineec()) // line ending corrector
+    .pipe(sourcemaps.write('.'))
     .pipe(dest(distPath.jsDist));
 }
 
@@ -88,7 +90,7 @@ function imgTask() {
 // Watch task
 function watchTask() {
   livereload.listen();
-  watch([files.scssPath, files.jsPath, files.imgPath], parallel(scssTask, jsTask, imgTask));
+  watch([files.scssPath, files.jsPath, files.imgPath], {interval: 1000 }, parallel(scssTask, jsTask, imgTask));
 }
 
 // Default task
